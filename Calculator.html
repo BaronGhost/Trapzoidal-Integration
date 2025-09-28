@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integration Calculator</title>
+  <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Integration Calculator</h1>
+
+    <div class="form-group">
+      <label for="func">Select Function:</label>
+      <select id="func">
+        <option value="sin">sin(x)</option>
+        <option value="cos">cos(x)</option>
+        <option value="tan">tan(x)</option>
+        <option value="xexp">x·e^x</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="upper">Upper Limit:</label>
+      <input type="number" id="upper" step="0.01">
+    </div>
+
+    <div class="form-group">
+      <label for="lower">Lower Limit:</label>
+      <input type="number" id="lower" step="0.01">
+    </div>
+
+    <button onclick="calculate()">Calculate Integral</button>
+
+    <!-- Result section -->
+    <div id="result-container">
+      <label>Result:</label>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script src="Calculator_Script.js"></script>
+</body>
+</html>
